@@ -1,11 +1,17 @@
 import './styles.css';
-import DownCaret from './menu-down.svg';
+import { format, formatDistanceToNowStrict } from 'date-fns';
 
-console.log('TEST');
+const latestPrescriptionDate = new Date('April 13, 2024');
 
-const element = document.querySelector('#caret-container');
+const result = formatDistanceToNowStrict(latestPrescriptionDate, {
+  addSuffix: true,
+});
 
-const img = document.createElement('img');
-img.setAttribute('src', DownCaret);
-img.setAttribute('style', 'width:50px');
-element.appendChild(img);
+const friendlyDate = format(latestPrescriptionDate, 'do MMMM');
+
+const daysAgoText = `The last prescription was sent ${result} (${friendlyDate})`;
+
+const latestPrescriptionText = document.querySelector(
+  '#latest-prescription-text'
+);
+latestPrescriptionText.textContent = daysAgoText;

@@ -23,6 +23,28 @@
   font-style: normal;
 }
 
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 40px;
+  margin: 5px;
+}
+
+section {
+  background-color: white;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  margin: 0 30px;
+}
+
+section p {
+  font-size: 30px;
+  text-align: center;
+}
+
 body {
   background-color: var(--backGroundColour);
   font-family: var(--font-hierarchy);
