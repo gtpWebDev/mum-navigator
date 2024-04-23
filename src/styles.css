@@ -11,7 +11,7 @@
   --bodyWidthMargin: max(calc(0.5 * (100vw - var(--minContentWidth))), 5vw);
 
   /* Main container height of 90% vh, centred */
-  --bodyHeight: 60vh;
+  --bodyHeight: 80vh;
   --bodyHeightMargin: calc(0.5 * (100vh - var(--bodyHeight)));
 }
 
@@ -30,6 +30,10 @@ h1 {
 h2 {
   font-size: 40px;
   margin: 5px;
+}
+
+a {
+  font-size: 12px;
 }
 
 section {
